@@ -1,0 +1,18 @@
+{% extends "admin/adminbase.html" %}
+{% block content %}
+{% load crispy_forms_filters %}
+
+<div class="card" style="width: 50rem;">
+  <div class="card-body">
+    <h4 class="card-title">UPDATE CARD</h4>
+
+
+<form method="POST">
+  {% csrf_token %}
+  {{ form|crispy }}
+  <button type="submit" class="btn btn-primary">update</button>
+</form>
+  </div>
+</div>
+
+{% endblock %}

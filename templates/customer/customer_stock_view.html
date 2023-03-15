@@ -1,0 +1,56 @@
+{% extends "customer/customerbase.html" %}
+{% block content %}
+
+
+<div class="card" style="width: 80rem;">
+  <div class="card-body">
+    <h5 class="card-title">STOCK VIEW</h5>
+
+ <table class="table">
+  <thead>
+    <tr>
+        <th scope="col">SL</th>
+        <th scope="col">NAME</th>
+      <th scope="col">STOCK ID</th>
+        <th scope="col">PRODUCT</th>
+      <th scope="col">PRICE</th>
+        <th scope="col">QUANTITY</th>
+
+
+
+
+    </tr>
+  </thead>
+       <tbody>
+  {% for i in data %}
+  <tr>
+    <td>{{forloop.counter}}</td>
+    <td>{{i.name}}</td>
+      <td>{{i.stock_id}}</td>
+      <td>{{i.product}}</td>
+      <td>{{i.price}}</td>
+      <td>{{i.quantity}}</td>
+  </tr>
+
+
+
+
+
+
+            {% endfor %}
+
+
+  </tbody>
+
+
+ </table>
+{% endblock %}
+
+  </div>
+</div>
+
+
+
+
+
+
